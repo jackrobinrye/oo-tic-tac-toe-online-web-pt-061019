@@ -103,9 +103,7 @@ class TicTacToe
       puts "Cat's Game!"
     elsif won?
       puts "Congratulations #{current_player}!"
-     
     end
   end 
-  
 
 end 
