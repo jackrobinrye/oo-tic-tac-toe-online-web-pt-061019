@@ -33,11 +33,7 @@ class TicTacToe
   end 
   
   def position_taken?(index) 
-    if @board[index] != " "
-      true 
-    else 
-      false 
-    end 
+    @board[index] != " " ? true : false 
   end 
     
   def valid_move?(index)
@@ -81,11 +77,7 @@ class TicTacToe
   end
   
   def full?
-    if turn_count <= 8
-      false
-    else 
-      true
-    end 
+    turn_count <= 8 ? false : true 
   end 
   
   def draw? 
@@ -103,17 +95,17 @@ class TicTacToe
     end 
   end
   
-  
   def play
     until over?
-      #binding.pry
       turn 
     end 
-    if won?
-      puts "Congratulations #{winner}!"
-    elsif draw?
-      puts "Cat's Game!" 
-    end 
+    if draw?
+      puts "Cat's Game!"
+    elsif won?
+      puts "Congratulations #{current_player}!"
+     
+    end
   end 
+  
 
 end 
